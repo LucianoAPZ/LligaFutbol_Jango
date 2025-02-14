@@ -1,0 +1,29 @@
+<h1>Classificació de la Lliga: {{ nom_lliga }}</h1>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Equip</th>
+            <th>Victòries</th>
+            <th>Empats</th>
+            <th>Derrotes</th>
+			<th>Punts</th>
+			<th>GF</th>
+            <th>GC</th>
+			<th>Prom</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for equip in classificacio %}
+        <tr>
+            <td>{{ equip.equip }}</td>
+            <td>{{ equip.victorias }}</td>
+            <td>{{ equip.empates }}</td>
+            <td>{{ equip.derrotas }}</td>
+			<td>{{ equip.punts }}</td>
+			<td>{{ equip.golesAfavor }}</td>
+            <td>{{ equip.golesEncontra }}</td>
+			<td>{{ equip.golesAverage }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

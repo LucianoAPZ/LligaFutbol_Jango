@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jugadores ordenados por goles</title>
+</head>
+
+<body>
+    <h1>Jugadores ordenados por goles marcados</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Equipo</th>
+                <th>Goles Marcados</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for jugador, gols in jugadors_amb_gols %}
+            <tr>
+                <td>{{ jugador.nom }}</td>
+                <td>{{ jugador.equip.nom }}</td>
+                <td>{{ gols }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>

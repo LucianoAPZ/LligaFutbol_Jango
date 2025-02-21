@@ -1,0 +1,8 @@
+- Para activer el (env) en la carpeta Fremworks:
+    source env/bin/activate
+- Para arancar el django en la carpeta dev25/lliga:
+    ./manage.py runserver
+- Cuando haga (./manage.py shell) usar:
+    from polls.models import * 
+    "O tambien"
+    from polls.models import Question,Choice

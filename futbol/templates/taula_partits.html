@@ -1,0 +1,39 @@
+<style>
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    table {
+        width: 100%;
+        height: 100%;
+        border-collapse: collapse;
+        /* Fusiona los bordes de las celdas */
+    }
+
+    th,
+    td {
+        border: 1px solid #000;
+        /* Borde para las celdas */
+        padding: 8px;
+        /* Espaciado interno */
+        text-align: center;
+        /* Alineación del texto */
+    }
+</style>
+
+<table border="1">
+    {% for row in resultats %}
+    <tr>
+        {% for cell in row %}
+        {% if forloop.first or forloop.parentloop.first %} <th> {% else %}
+        <td> {% endif %}
+            {{ cell }}
+            {% if forloop.first or forloop.parentloop.first %} </th> {% else %} </td> {% endif %}
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
